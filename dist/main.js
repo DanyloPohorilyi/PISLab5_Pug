@@ -1,0 +1,1 @@
+(()=>{"use strict";var e;document.body.prepend(("Привіт світ!",(e=document.createElement("h1")).textContent="Привіт світ!",e))})();
