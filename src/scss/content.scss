@@ -1,0 +1,407 @@
+@import 'fonts';
+@import 'colors';
+
+// Змінні для banner
+$banner-width: 100%;
+$banner-height: 100vh;
+$banner-back: url('../images/new_pattern.jpg');
+$banner-image-size: 400px;
+$banner-h-font-size: 32px;
+$text-margin-top: 140px;
+$text-width: 520px;
+$text-height: 48px;
+
+// Змінні для buttons
+$btn-width: 13vw;
+$btn-height: 48px;
+$btn-gap: 12px;
+$text-size-btn: 16px;
+
+// Змінні для cards
+$card-width: 245px;
+$card-height: 348px;
+$gap-between-cards: 1.38vw;
+$gap-between-rows: 60px;
+
+
+main{
+    .banner {
+        width: $banner-width;
+        background-image: $banner-back;
+        background-size: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media all and (min-width: 991px) {
+            height: $banner-height;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            @media all and (max-width: 991px) {
+                margin-top: 10vh;
+                margin-bottom: 10vh;
+            }    
+            .image {
+                width: $banner-image-size;   
+                min-width: calc($banner-image-size / 1.75);   
+                min-height: $banner-image-size;
+                background-image: url('../images/japanese-food.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            @media all and (min-width: 991px) {
+                justify-content: space-between;
+                    
+                margin-left: 15vw;
+                margin-right: 15vw;
+            }
+            @media all and (max-width: 991px) and (min-width: 440px)  {
+                flex-direction: column-reverse;
+                justify-content: center;
+                .image{
+                    width: $banner-image-size;
+                }
+            }
+            @media all and (max-width: 440px)  {
+                
+                justify-content: center;
+                .image{
+                    display: none;
+                }
+            }
+            
+            
+            .textblock {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;               
+            }
+            
+            .text {
+                text-align: center;
+                
+                font-family: 'GludakRegular';
+                color: $light;
+                @media all and (min-width: 801px) {
+                    width: $text-width;
+                    font-size: $banner-h-font-size;
+                }
+                @media all and (max-width: 801px) and (min-width: 440px)  {
+                    font-size: $banner-h-font-size - 4;
+                }
+                @media all and (max-width: 440px)  {
+                    font-size: $banner-h-font-size - 8;
+                    
+                }
+            }
+            
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 24px;
+            
+                font-family: 'NunitoVariable';
+
+                .btn1, .btn2 {
+                    width: $btn-width;
+                    height: $btn-height;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    font-family: $text-size-btn;
+                    align-items: center;
+                    font-weight: 500;
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        text-align: center;
+                        @media all and (min-width: 801px){
+                            margin-top: 12%;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        
+
+                    }
+                    @media all and (max-width: 801px) and (min-width: 400px){
+                        width: $btn-width * 2;
+                        font-size: $text-size-btn - 2;
+                    }
+                    @media all and (max-width: 400px){
+                        width: $btn-width * 4;
+                    }
+                }
+                @media all and (max-width: 400px){
+                    flex-direction: column;
+                }
+                .btn1 {
+                    border: 1px solid $light;
+                    &:hover{
+                        background-color: $light;
+                    }
+                    &:hover a{
+                        color: $black;
+                        font-weight: 700;
+                        
+                    }
+                }
+            
+                .btn2 {
+                    background-color: $black;
+                    margin-left: $btn-gap;
+                    &:hover{
+                        background-color: $color1;
+                    }
+                    &:hover a{
+                        color: $black;
+                        font-weight: 700;
+                        
+                    }
+                    @media all and (max-width: 400px){
+                        margin-left: 0;
+                        margin-top: $btn-gap;
+                    }
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
+    .menu {
+        margin: 60px 170px 0;
+        @media all and (max-width: 875px) and (min-width: 440px)  {
+            margin: 60px 85px 0;
+        }
+        @media all and (max-width: 440px)  {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;            
+        }
+        h2{
+            font-family: 'JustBreatheBd';
+            font-size: $banner-h-font-size;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $gap-between-rows;
+            justify-content: space-between;
+            gap: $gap-between-rows $gap-between-cards;
+            @media all and (max-width: 440px)  {
+                align-items: center;
+            }
+            .card {
+                width: $card-width;
+                height: $card-height;
+                border: 1px solid #0000001a;
+                box-sizing: border-box;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                .photoblock{
+                    position: relative;
+                    flex: 4;
+
+                    .label{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 46px;
+                        height: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'NunitoVariable';
+                        font-size: 12px;
+                        font-weight: 500;
+                        background-color: $spicy;
+                        border-radius: 6px;
+                        color: $light;
+                    }
+                    .photo{
+                        width: 100%;
+                        height: 100%;
+                        .photo1{
+                            
+                            background-image: url('../images/food1.jpg');
+                        }
+                        .photo2{
+                            background-image: url('../images/food2.jpg');
+                        }
+                        .photo3{
+                            background-image: url('../images/food3.jpg');
+                        }
+                        .photo4{
+                            background-image: url('../images/food4.jpg');
+                        }
+                        .photo5{
+                            background-image: url('../images/food5.jpg');
+                        }
+                        .photo6{
+                            background-image: url('../images/food6.jpg');
+                        }
+                        .photo7{
+                            background-image: url('../images/food7.jpg');
+                        }
+                        .photo8{
+                            background-image: url('../images/food8.jpg');
+                        }
+                        .photobase{
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            border-radius: 6px 6px 0 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .info{
+                    flex: 2;
+                    margin: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    a{
+                        font-family: 'GludakRegular';
+                        color: $black;
+                        &:hover{
+                            color: $color_hover;
+                        }
+                    }
+                    .price{
+                        font-family: 'NunitoVariable';
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    .add-block{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 8px;
+                        font-family: 'NunitoVariable';
+
+                        .add-btn{
+                            font-weight: bold;
+                            font-size: 18px;
+                            background-color: $pink;
+                            padding: 2px 22px;
+                            color: #fff;
+                            &:hover{
+                                cursor: pointer;
+                                background-color: $color_hover;
+                            }
+                        }
+                        input{
+                            font-family: 'NunitoVariable';
+                            width: 32px;
+                            box-sizing: content-box;
+                            border: 1px solid #0000001a;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+    
+    
+    .reservation {
+        margin: 60px 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        @media all and (max-width: 801px) and (min-width: 440px){
+            margin: 60px 85px;
+            gap: 0;
+        }
+        @media all and (max-width: 440px){
+            margin-top: 60px;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+        .form {
+            flex: 1;
+            margin-top: 30px;
+            height: 456px;
+            h2{
+                font-family: 'JustBreatheBd';
+                font-size: $banner-h-font-size;
+            }
+            form{
+                font-family: 'NunitoVariable';
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                margin-top: 24px;
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    label{
+                        font-weight: 600;
+                    }
+                    input{
+                        font-family: 'NunitoVariable';
+                        font-size: 14px;
+                        padding: 8px 12px;
+                    }
+                }
+                button{
+                    width: 180px;
+                    font-family: 'NunitoVariable';
+                    font-size: 16px;
+                    font-weight: 600;
+                    border: 0;
+                    background-color: $black;
+                    color: #fff;
+                    padding: 12px;
+                    border-radius: 8px;
+                    @media all and (max-width: 440px){
+                        width: 100%;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $color_hover;
+                    }
+                }
+            }
+        }
+        @media all and (min-width: 801px) {
+            .image-form{
+                background-image: url('../images/Love-that-design-Asian-Han-Restaurant-04.webp');
+                width: 520px;
+                height: 416px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 6px;
+                background-position: center;
+                flex: 1;
+            }    
+        }
+        
+        
+    }
+    
+    
+}

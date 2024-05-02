@@ -1,156 +1,31 @@
-// Змінні для header
-$header-height: 80px;
-$logo-size: 40px;
-$search-height: 36px;
-$search-width: 616px;
+@import 'fonts';
+@import 'header';
+@import 'content';
 
-$logo-color: #e5e5e5;
-$logo-round: 100px;
-$margin-header: 0px 20px;
 
-// Змінні для banner
-$banner-width: 100%;
-$banner-height: 100vh;
-$banner-back: #666666;
-$banner-image-size: 400px;
-$text-margin-top: 140px;
-$text-width: 520px;
-$text-height: 48px;
-
-// Змінні для buttons
-$btn-width: 166px;
-$btn-height: 48px;
-$btn-gap: 12px;
-
-// Змінні для cards
-$card-width: 245px;
-$card-height: 348px;
-$gap-between-cards: 20px;
-$gap-between-rows: 60px;
 
 * {
     padding: 0;
     margin: 0;
 }
 
-header {
-    height: $header-height;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    .logo {
-        height: $logo-size;
-        width: $logo-size;
-        background-color: $logo-color;
-        border-radius: $logo-round;
-        margin: $margin-header;
-    }
-
-    h1 {
-        width: 704px;
-        margin: $margin-header;
-    }
-
-    .search {
-        background-color: $logo-color;
-        height: $search-height;
-        width: $search-width;
-    }
-}
-
-.banner {
-    width: $banner-width;
-    height: $banner-height;
-    background-color: $banner-back;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70vw;
-
-    
-}
-
-.image {
-    width: $banner-image-size;   
-    height: $banner-image-size;
-    background-color: $logo-color;
-}
-
-.textblock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    
-}
-
-.text {
-    margin-top: $text-margin-top;
-    width: $text-width;
-    height: $text-height;
-    background-color: $logo-color;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 24px;
-
-    .btn1, .btn2 {
-        width: $btn-width;
-        height: $btn-height;
-        border-radius: 8px;
-    }
-
-    .btn1 {
-        border: 1px solid $logo-color;
-    }
-
-    .btn2 {
-        background-color: #000;
-        margin-left: $btn-gap;
-    }
-}
-
-.menu {
-    margin: 60px 170px 0;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: $gap-between-rows;
-    justify-content: space-between;
-    gap: $gap-between-rows $gap-between-cards;
-
-    .card {
-        width: $card-width;
-        height: $card-height;
-        background-color: $logo-color;
-    }
-}
-
-.reservation {
-    margin: 60px 170px;
-}
-
-.form {
-    margin-top: 30px;
-    height: 456px;
-    background-color: $logo-color;
-}
-
 footer {
     height: 220px;
     text-align: center;
+    hr{
+        border-top: 1px;
+        border-color: #0000001a;
+    }
+    .text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-family: 'JustBreatheObl1';
+            font-size: 20px;
+            color: $black;
+        }
+    }
 }

@@ -3,21 +3,125 @@ main
         div(class='content')
             div(class='image')
             div(clas='textblock')
-                div(class='text')
+                div(class='text') 
+                    h1 Welcome to Our 
+                    h1 Restaurant
                 div(class='buttons')
                     div(class='btn1')
+                        a(href='menu') Make a Reservation
                     div(class='btn2')
+                        a(href='menu') View Menu
+
     section(class='menu')
-        h2 Меню
+        h2 Featured Dishes
         div(class='cards')
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Spicy
+                    div(class='photo')
+                        div(class='photobase photo1')
+                div(class='info')
+                    a(href="#") Sushi Combo 
+                    .price Price: $25 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='photo')
+                        div(class='photobase photo2')
+                div(class='info')
+                    a(href="#") Wonton Soup 
+                    .price Price: $13.50 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)    
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Hot
+                    div(class='photo')
+                        div(class='photobase photo3')
+                div(class='info')
+                    a(href="#") Chicken Noodle Soup 
+                    .price Price: $13.50 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Spicy
+                    div(class='photo')
+                        div(class='photobase photo4')
+                div(class='info')
+                    a(href="#") Curry 
+                    .price Price: $15.30 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Spicy
+                    div(class='photo')
+                        div(class='photobase photo5')
+                div(class='info')
+                    a(href="#") Chicken Teriyaki 
+                    .price Price: $15.95 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Hot
+                    div(class='photo')
+                        div(class='photobase photo6')
+                div(class='info')
+                    a(href="#") Steamed Pork Buns 
+                    .price Price: $9 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='photo')
+                        div(class='photobase photo7')
+                div(class='info')
+                    a(href="#") Fried Ice Cream
+                    .price Price: $7.25 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
             div(class='card')
+                div(class='photoblock')
+                    div(class='label')
+                        p Spicy
+                    div(class='photo')
+                        div(class='photobase photo8')
+                div(class='info')
+                    a(href="#") Boba Tea 
+                    .price Price: $5.35 
+                    .add-block 
+                        .add-btn Add 
+                        input(type="number", max=10, value=1)
     section(class='reservation')
-        h2 Форма
         div(class='form')
+            h2 Make a Reservation
+            form(action="", method="get")
+                .input
+                    label(for="name") Name
+                    input(type="text", placeholder='Enter your name', id='name')
+                .input
+                    label(for="date") Date
+                    input(type="text", placeholder='Select a date', id='date', onfocus="(this.type='date')")
+                .input
+                    label(for="time") Time
+                    input(type="text", placeholder='Select a time', id='time', onfocus="(this.type='time')")
+                .input
+                    label(for="size") Party Size
+                    input(type="text", placeholder='Number of guests', id='size')
+                button(type="submit") Confirm Reservation
+        .image-form
